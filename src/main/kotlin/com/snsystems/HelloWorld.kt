@@ -26,6 +26,9 @@ fun main() {
     Invoice("S").method1()
     Invoice("SN", 21).method1()
     stringOps(" --> Sathya")
+    defArgs(2, 3)
+    defArgs()
+    defArgs(2)
 }
 
 fun sum(x: Int, y: Int): Int {
@@ -111,4 +114,8 @@ class Invoice(firstName: String) {
 fun stringOps(str: String) {
     println(str.plus(" .. Welcome"))
     println(str.trimMargin())
+}
+
+fun defArgs(x: Int = 5, y: Int = 4) {
+    println("defArgs : sum of $x and $y is : ${x+y}")
 }
