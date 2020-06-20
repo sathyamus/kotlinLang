@@ -25,6 +25,7 @@ fun main() {
     println(printLargestNoElse(2, 3))
     Invoice("S").method1()
     Invoice("SN", 21).method1()
+    stringOps(" --> Sathya")
 }
 
 fun sum(x: Int, y: Int): Int {
@@ -105,4 +106,9 @@ class Invoice(firstName: String) {
         println("Invoice : method1")
         println("Invoice : method1 : $this.firstName")
     }
+}
+
+fun stringOps(str: String) {
+    println(str.plus(" .. Welcome"))
+    println(str.trimMargin())
 }
