@@ -12,6 +12,10 @@ fun main() {
     easyNotNull("Sathya")
     println(MAX_SIZE)
     printItemsUsingUntil(10)
+    printItemsUsingUntil()
+    println(1010)
+    println(1010L)
+
 }
 
 fun sum(x: Int, y: Int): Int {
@@ -28,7 +32,7 @@ fun sumNoUnit(x: Int, y: Int) {
     println("Sum of $x and $y is: ${x+y}")
 }
 
-fun easyNotNull(s: String) {
+fun easyNotNull(s: String?) {
     s?.let {
         println(s)
     }
@@ -41,7 +45,7 @@ fun printItemsUsingFor() {
     }
 }
 
-fun printItemsUsingFor(x: Int) {
+fun printItemsUsingUntil(x: Int = 15) {
     for (i in 0 until x) {
         println(i)
     }
