@@ -99,7 +99,12 @@ fun printLargestNoElse(a: Int, b: Int) {
 }
 
 class Invoice(firstName: String) {
-    constructor(lastName: String, age: Int): Invoice(firstName) {
+
+    init {
+        println("Invoice : primary constructor : $firstName")
+    }
+
+    constructor(lastName: String, age: Int): this(lastName) {
         println("Invoice : sec constructor : $this.firstName")
         println("Invoice : sec constructor : $this.lastName")
         println("Invoice : sec constructor : $this.age")
