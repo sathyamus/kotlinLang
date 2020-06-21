@@ -29,7 +29,13 @@ fun main() {
     defArgs(2, 3)
     defArgs()
     defArgs(2)
+    printMutableListOf()
+    printMutableMapOf()
+
+
 }
+
+
 
 fun sum(x: Int, y: Int): Int {
     return x + y
@@ -123,4 +129,22 @@ fun stringOps(str: String) {
 
 fun defArgs(x: Int = 5, y: Int = 4) {
     println("defArgs : sum of $x and $y is : ${x+y}")
+}
+
+fun printMutableListOf() {
+    val numbers = mutableListOf("One", "Two", "There")
+    numbers.add("Four")
+
+    for (str in numbers) {
+        println("printMutableListOf : $str")
+    }
+}
+
+fun printMutableMapOf() {
+    val numbersMap = mutableMapOf("one" to 1)
+    numbersMap.put("two", 2)
+    println("printMutableMapOf : ${numbersMap.size}")
+
+    println(numbersMap)
+
 }
