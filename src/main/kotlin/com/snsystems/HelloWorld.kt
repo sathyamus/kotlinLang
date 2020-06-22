@@ -31,6 +31,9 @@ fun main() {
     defArgs(2)
     printMutableListOf()
     printMutableMapOf()
+	searchItem("one")
+	searchItem("One")
+	searchItem("Three")
 
 
 }
@@ -144,7 +147,14 @@ fun printMutableMapOf() {
     val numbersMap = mutableMapOf("one" to 1)
     numbersMap.put("two", 2)
     println("printMutableMapOf : ${numbersMap.size}")
-
     println(numbersMap)
 
 }
+
+fun searchItem(s: String) {
+        val numbersMap = mutableMapOf("one" to 1)
+    numbersMap.put("two", 2)
+	println("searchItem : ${numbersMap.size}")
+    println("searchItem $s: $numbersMap.contains(s)") 
+}
+
