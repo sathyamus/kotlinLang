@@ -151,10 +151,22 @@ fun printMutableMapOf() {
 
 }
 
-fun searchItem(s: String) {
+fun searchItem(s: Any) {
         val numbersMap = mutableMapOf("one" to 1)
     numbersMap.put("two", 2)
-	println("searchItem : ${numbersMap.size}")
-    println("searchItem $s: $numbersMap.contains(s)") 
+    println("searchItem size : ${numbersMap.size}")
+
+    val isFound = if (numbersMap.contains(s)) true else false
+    println("searchItem $s - contains : $isFound")
+    
+    val isKeyFound = if (numbersMap.containsKey(s)) true else false
+    println("searchItem $s - containsKey : $isKeyFound") 
+    
+    var isValueFound = false
+    if (s is Int)
+    	if (numbersMap.containsValue(s)) {
+            isValueFound = true
+        }
+    println("searchItem $s - containsValue : $isValueFound")  
 }
 
