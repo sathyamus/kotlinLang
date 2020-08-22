@@ -34,7 +34,9 @@ fun main() {
 	searchItem("one")
 	searchItem("One")
 	searchItem("Three")
-
+    searchItem(1)
+    searchItem(2)
+    searchItem(3)
 
 }
 
@@ -169,4 +171,3 @@ fun searchItem(s: Any) {
         }
     println("searchItem $s - containsValue : $isValueFound")  
 }
-
