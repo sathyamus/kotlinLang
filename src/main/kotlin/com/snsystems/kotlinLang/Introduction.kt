@@ -7,11 +7,12 @@ fun main() {
     println(foo("b", number = 1))
     println(foo("c", toUpperCase = true))
     println(foo(name = "d", number = 2, toUpperCase = true))
-    println(containsEven(listOf(2,4,6)))
-    println(containsEven(listOf(1,3,5)))
-    println(containsEven(listOf(1,2,3)))
+    println(containsEven(listOf(2, 4, 6)))
+    println(containsEven(listOf(1, 3, 5)))
+    println(containsEven(listOf(1, 2, 3)))
     println(getPattern())
     println(getPeople())
+
 }
 
 
@@ -57,7 +58,7 @@ public String foo(String name) {
 */
 
 // Pass a lambda to any function to check if the collection contains an even number. The function any gets a predicate as an argument and returns true if there is at least one element satisfying the predicate.
-fun containsEven(collection: Collection<Int>): Boolean = collection.any { it % 2 == 0}
+fun containsEven(collection: Collection<Int>): Boolean = collection.any { it % 2 == 0 }
 
 val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
 
@@ -89,4 +90,36 @@ data class Person(val name: String, val age: Int) {
 
 fun getPeople(): List<Person> {
     return listOf(Person("Alice", 29), Person("Bob", 31))
+}
+
+
+//public void sendMessageToClient(
+//@Nullable Client client,
+//@Nullable String message,
+//@NotNull Mailer mailer
+//) {
+//    if (client == null || message == null) return;
+//
+//    PersonalInfo personalInfo = client.getPersonalInfo();
+//    if (personalInfo == null) return;
+//
+//    String email = personalInfo.getEmail();
+//    if (email == null) return;
+//
+//    mailer.sendMessage(email, message);
+//}
+
+fun sendMessageToClient(
+        client: Client?, message: String?, mailer: Mailer) {
+    val email = client?.personalInfo?.email
+    if (email != null && message != null) {
+        mailer.sendMessage(email, message)
+    }
+
+}
+
+class Client(val personalInfo: PersonalInfo?)
+class PersonalInfo(val email: String?)
+interface Mailer {
+    fun sendMessage(email: String, message: String)
 }
