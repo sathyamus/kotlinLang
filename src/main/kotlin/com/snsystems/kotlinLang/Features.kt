@@ -8,7 +8,15 @@ fun main() {
     println(greeting.plus(" World"))
 
     var dealKotlinDTO = DealKotlinDTO(1, "PRIME", "Premium Deal", "Active")
-    System.out.println("Deal Code :  $dealKotlinDTO")
-    System.out.println("Deal Name : $dealKotlinDTO.getDealName()")
-    System.out.println("Status: $dealKotlinDTO.getStatus()")
+    println("Deal Code :  $dealKotlinDTO")
+    println("Deal Name : $dealKotlinDTO.getDealName()")
+    println("Status: $dealKotlinDTO.getStatus()")
+
+	easyNotNull(null)
+    easyNotNull("Sathya")
+}
+
+fun easyNotNull(s: String?) {
+s?.let {
+	println(s)
 }

@@ -9,5 +9,10 @@ public class Features {
         System.out.println("Deal Code : " + dealJavaDTO.getDealCode());
         System.out.println("Deal Name : " + dealJavaDTO.getDealName());
         System.out.println("Status: " + dealJavaDTO.getStatus());
+		
+		
+		if (greeting != null) {
+			System.out.println(greeting);
+		}
     }
 }
