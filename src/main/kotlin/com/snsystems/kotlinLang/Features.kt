@@ -17,6 +17,7 @@ fun main() {
 }
 
 fun easyNotNull(s: String?) {
-s?.let {
-	println(s)
+    s?.let {
+        println(s)
+    }
 }
