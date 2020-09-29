@@ -14,6 +14,13 @@ fun main() {
 
     println(a add b)
 
+
+    display()
+
+}
+
+fun display() {
+    println("Kotlin functions can be declared at top level in a file, meaning you do not need to create a class to hold a function")
 }
 
 infix fun Int.add(a: Int): Int {
